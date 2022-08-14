@@ -16,6 +16,5 @@ export const Project = ({data}) => {
                 </div>
             </a>
         </div>
-
     )
 }

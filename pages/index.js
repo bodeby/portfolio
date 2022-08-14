@@ -7,22 +7,23 @@ import { Tools } from '../components/tools'
 import { Project } from '../components/project'
 
 export default function Home({ allPostsData }) {
+
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={'mb-12 text-xl'}>
+      <section className={'mb-12 text-xl font-thin'}>
         <p>Hello, I’m Frederik. I’m a software engineering student with a passion for web-based development. You can contact me on Twitter.</p>
       </section>
 
       <section className='space-y-4 mt-4'>
         <h2 className={'text-2xl font-bold'}>Projects</h2>
 
-        <div className='grid grid-cols-2 gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <Project data={"Priotool"} />
           <Project data={"Sustainify"} />
-          <Project data={"Plagiarism checker"} />
+          <Project data={"SmukDesk"} />
           <Project data={"WPA widget"} />
         </div>
       </section>
