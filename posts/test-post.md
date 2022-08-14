@@ -1,7 +1,9 @@
 ---
-title: "Test post"
-date: "2020-01-20"
+title: "Embedable web-widgets"
+date: "2022-08-03"
 ---
+
+hello hello
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
 
