@@ -7,26 +7,22 @@ import Date from '../components/date'
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
-      <Head>
+      <Head> 
         <title>{siteTitle}</title>
       </Head>
-      <section className={''}>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+      <section className={'mb-12 text-xl'}>
+        <p>Hello, I’m Frederik. I’m a software engineer and a translator (English/Japanese). You can contact me on Twitter.</p>
       </section>
-      <section className={``}>
-        <h2 className={''}>Blog</h2>
-        <ul className={''}>
+      <section className={`space-y-4`}>
+        <h2 className={'text-2xl font-bold'}>Blog</h2>
+        <ul className={'space-y-4 text-lg'}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={''} key={id}>
               <Link href={`/posts/${id}`}>
-                <a>{title}</a>
+                <a className='text-xl text-blue-500'>{title}</a>
               </Link>
               <br />
-              <small className={''}>
+              <small className={'text-md text-gray-500'}>
                 <Date dateString={date} />
               </small>
             </li>

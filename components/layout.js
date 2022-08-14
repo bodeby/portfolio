@@ -31,12 +31,12 @@ export default function Layout({ children, home }) {
             <Image
               priority
               src="/images/profile.jpg"
-              className={'rounded-full w-[144px] h-[144px]'}
+              className={'rounded-full'}
               height={144}
               width={144}
               alt={name}
             />
-            <h1 className={'font-lg'}>{name}</h1>
+            <h1 className={'text-4xl font-bold py-6'}>{name}</h1>
           </>
         ) : (
           <>
@@ -45,26 +45,26 @@ export default function Layout({ children, home }) {
                 <Image
                   priority
                   src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
+                  className='rounded-full'
                   height={108}
                   width={108}
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className='py-4 text-2xl'>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a className=''>{name}</a>
               </Link>
             </h2>
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main className='mt-4'>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <a className='text-blue-500'>← Back to home</a>
           </Link>
         </div>
       )}
