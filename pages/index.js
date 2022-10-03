@@ -7,14 +7,14 @@ import { Tools } from '../components/tools'
 import { Project } from '../components/project'
 
 export default function Home({ allPostsData }) {
-
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={'mb-12 text-xl font-thin'}>
-        <p>Hello, I’m Frederik. I’m a software engineering student with a passion for web-based development. You can contact me on Twitter.</p>
+        <p>Hello, I’m Frederik. I’m a software engineering student with a passion for web-based development. You can contact me on  
+          <a href='https://www.linkedin.com/in/frederik-bode-thorbensen/' target={'_blank'} className='text-blue-500 ml-1'>Linkedin</a>.</p>
       </section>
 
       <section className='space-y-4 mt-4'>

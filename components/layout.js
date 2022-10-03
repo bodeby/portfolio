@@ -30,7 +30,7 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/profile.jpg"
+              src="/images/user_pic.jpg"
               className={'rounded-full'}
               height={144}
               width={144}
@@ -44,7 +44,7 @@ export default function Layout({ children, home }) {
               <a>
                 <Image
                   priority
-                  src="/images/profile.jpg"
+                  src="/images/user_pic.jpg"
                   className='rounded-full'
                   height={108}
                   width={108}
