@@ -1,3 +1,9 @@
+<script>
+	import Button from '$lib/Button.svelte';
+</script>
+
+
+<Button/>
 
 <!-- app -->
 <section class="flex shrink-0 items-center space-x-4">
@@ -9,22 +15,23 @@
 	<div class="flex flex-col -space-y-1">
 		<h1 class="text-xl font-semibold">Frederik Bode</h1>
 		<p class="text-lg font-light">The next iteration of Svelte's tooling</p>
-		<a href="https://github.com/bodeby" target="_blank">@bodeby</a>
+		<a class="font-mono text-lg" href="https://github.com/bodeby" target="_blank">@bodeby</a>
 	</div>
 </section>
 
 <!-- About Section-->
 <section>
-	<h2 class="text-xl font-semibold">About</h2>
+	<h2 class="text-xl font-semibold mb-2">About</h2>
 	<p class="text-lg font-light">
-		Hi, I'm Frederik Bode, a software engineer from Denmark. I'm currently working on SvelteKit, the
-		next iteration of Svelte's tooling.
+		Enthusiastic Software Developer eager to contribute to team success through hard work, attention
+		to detail and excellent organisational skills. Motivated to learn, grow and excel in Software
+		Development.
 	</p>
 </section>
 
 <!-- Work Section-->
 <section class="flex flex-col space-y-6">
-	<h2 class="text-xl font-semibold">Work Experience</h2>
+	<h2 class="text-xl font-semibold -mb-4">Work Experience</h2>
 
 	<article class="flex space-x-4">
 		<h3>2022 - present</h3>
@@ -40,10 +47,13 @@
 	</article>
 
 	<article class="flex space-x-4">
-		<h3>2022 - present</h3>
+		<h3>2022 - 2023</h3>
 		<div>
-			<h4 class="text-lg">Software Engineer - Jorato</h4>
-			<p class="text-lg font-light">Software Engineer</p>
+			<h4 class="text-lg">Teaching Assistant - Aalborg University CPH</h4>
+			<p class="text-lg font-light">
+				Assisting in the course: software development, with a focus on object-oriented design &
+				analysis
+			</p>
 			<p>TS • Next • Nest • Stitches • Mobx • Turbo</p>
 		</div>
 	</article>
