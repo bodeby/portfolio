@@ -37,7 +37,6 @@
 
 	{#each cats as cat}
 		<Button />
-		<Block {cat} />
 	{/each}
 
 	<article class="flex space-x-4">
