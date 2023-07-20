@@ -1,9 +1,13 @@
 <script>
 	import Button from '$lib/Button.svelte';
+	import Block from '$lib/Block.svelte';
+
+	let cats = [
+		{ id: 'J---aiyznGQ', name: 'Keyboard Cat' },
+		{ id: 'z_AbfPXTKms', name: 'Maru' },
+		{ id: 'OUtn3pvWmpg', name: 'Henri The Existential Cat' }
+	];
 </script>
-
-
-<Button/>
 
 <!-- app -->
 <section class="flex shrink-0 items-center space-x-4">
@@ -23,9 +27,7 @@
 <section>
 	<h2 class="text-xl font-semibold mb-2">About</h2>
 	<p class="text-lg font-light">
-		Enthusiastic Software Developer eager to contribute to team success through hard work, attention
-		to detail and excellent organisational skills. Motivated to learn, grow and excel in Software
-		Development.
+		Hello, I’m Frederik. I’m a software engineering student with a passion for web-based development. You can contact me on <a class="underline underline-offset-4" href="https://www.linkedin.com/in/frederik-bode-thorbensen/">Linkedin</a>.
 	</p>
 </section>
 
@@ -33,9 +35,14 @@
 <section class="flex flex-col space-y-6">
 	<h2 class="text-xl font-semibold -mb-4">Work Experience</h2>
 
+	{#each cats as cat}
+		<Button />
+		<Block {cat} />
+	{/each}
+
 	<article class="flex space-x-4">
-		<h3>2022 - present</h3>
-		<div>
+		<h3 class="w-1/4">2022 - present</h3>
+		<div class="w-3/4">
 			<h4 class="text-lg shrink-0 flex-nowrap">Software Engineer - Jorato</h4>
 			<p class="text-lg font-light">
 				Led a team of 5 engineers to develop our creator tools and e-commerce app. Collaborated
