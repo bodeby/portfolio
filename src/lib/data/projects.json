@@ -1,0 +1,17 @@
+[
+	{
+		"title": "Educado",
+		"company": "Open Source",
+		"period": "2022",
+		"description": "Project Maintainer for Open Source education platform, with a focus on accessibility and usability for the poorest communities in Brazil.",
+		"technologies": ["TS", "React", "DevOps", "Management", "Planning"]
+	},
+	{
+		"title": "Hyperparse",
+		"company": "WIP",
+		"period": "2023",
+		"link": "https://crates.io/crates/hyperparse",
+		"description": "Flexible HTML parsing library implemented in Rust. It allows you to parse HTML documents, extract structured information, and perform various operations on the parsed data.",
+		"technologies": ["Rust", "Parser", "Lexer", "HTML5"]
+	}
+]

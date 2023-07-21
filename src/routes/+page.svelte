@@ -2,10 +2,12 @@
 	// Data
 	import experiences from '$lib/data/experience.json';
 	import education from '$lib/data/education.json';
+	import projects from '$lib/data/projects.json';	
 
 	// Components
 	import ExpCard from '$lib/components/ExpCard.svelte';
 	import EduCard from '$lib/components/EduCard.svelte';
+	import ProCard from '$lib/components/ProCard.svelte';
 </script>
 
 <!-- Presentation Header -->
@@ -28,7 +30,7 @@
 <!-- About Section-->
 <section>
 	<h2 class="text-xl font-semibold mb-2">About</h2>
-	<p class="text-lg font-light subpixel-antialiased">
+	<p class="text-md font-normal text-gray-300 leading-snug subpixel-antialiased">
 		Hello, I’m Frederik. I’m a software engineering student with a passion for web-based
 		development. You can contact me on <a
 			class="underline underline-offset-4"
@@ -45,19 +47,17 @@
 	{/each}
 </section>
 
-<!-- Work Section-->
-<section class="flex flex-col space-y-6">
-	<h2 class="text-xl font-semibold mb-4">Education</h2>
-	<div class="grid grid-cols-4 gap-y-4">
-		{#each education as edu}
-			<EduCard {edu} />
-		{/each}
-	</div>
+<!-- Side Projects -->
+<section class="flex flex-col space-y-8">
+	<h2 class="text-md font-semibold -mb-4">Side Projects</h2>
+	{#each projects as exp}
+		<ProCard {exp} />
+	{/each}
 </section>
 
-<!-- Side Projects -->
-<section class="flex flex-col">
-	<h2 class="text-xl font-semibold mb-4">Side Projects</h2>
+<!-- Education Section-->
+<section class="flex flex-col space-y-6">
+	<h2 class="text-xl font-semibold mb-4">Education</h2>
 	<div class="grid grid-cols-4 gap-y-4">
 		{#each education as edu}
 			<EduCard {edu} />
