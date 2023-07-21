@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Education } from '../interfaces/education';
+	import type { Education } from '../../interfaces/education';
 	export let edu: Education;
 </script>
 

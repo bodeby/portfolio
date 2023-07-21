@@ -4,8 +4,8 @@
 	import education from '$lib/data/education.json';
 
 	// Components
-	import ExpCard from '$lib/ExpCard.svelte';
-	import EduCard from '$lib/EduCard.svelte';
+	import ExpCard from '$lib/components/ExpCard.svelte';
+	import EduCard from '$lib/components/EduCard.svelte';
 </script>
 
 <!-- Presentation Header -->
@@ -38,23 +38,29 @@
 </section>
 
 <!-- Work Section-->
-<section class="flex flex-col">
-	<h2 class="text-xl font-semibold mb-4">Work Experience</h2>
+<section class="flex flex-col space-y-8">
+	<h2 class="text-md font-semibold -mb-4">Work Experience</h2>
+	{#each experiences as exp}
+		<ExpCard {exp} />
+	{/each}
+</section>
 
+<!-- Work Section-->
+<section class="flex flex-col space-y-6">
+	<h2 class="text-xl font-semibold mb-4">Education</h2>
 	<div class="grid grid-cols-4 gap-y-4">
-		{#each experiences as exp}
-			<ExpCard {exp}/>
+		{#each education as edu}
+			<EduCard {edu} />
 		{/each}
 	</div>
 </section>
 
-<!-- Work Section-->
+<!-- Side Projects -->
 <section class="flex flex-col">
-	<h2 class="text-xl font-semibold mb-4">Education</h2>
-
+	<h2 class="text-xl font-semibold mb-4">Side Projects</h2>
 	<div class="grid grid-cols-4 gap-y-4">
 		{#each education as edu}
-			<EduCard {edu}/>
+			<EduCard {edu} />
 		{/each}
 	</div>
 </section>
