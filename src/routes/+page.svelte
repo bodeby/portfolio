@@ -44,14 +44,12 @@
 </section>
 
 <!-- About Section-->
-<section>
-	<h2 class="text-xl font-semibold mb-2 text-primary dark:text-dark-primary">About</h2>
-	<p
-		class="
-	text-md font-normal
+<section class="text-primary dark:text-dark-primary">
+	<h2 class="text-xl font-semibold mb-2">About</h2>
+	<p class="
+	text-md font-normal 
 	leading-snug subpixel-antialiased
-	"
-	>
+	">
 		Hello, I’m Frederik. I’m a software engineering student with a passion for web-based
 		development. You can contact me on <a
 			class="underline underline-offset-4"

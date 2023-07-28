@@ -3,6 +3,7 @@
 		"title": "Educado",
 		"company": "Open Source",
 		"period": "2022",
+		"link": "https://crates.io/crates/hyperparse",
 		"description": "Project Maintainer for Open Source education platform, with a focus on accessibility and usability for the poorest communities in Brazil.",
 		"technologies": ["TS", "React", "DevOps", "Management", "Planning"]
 	},

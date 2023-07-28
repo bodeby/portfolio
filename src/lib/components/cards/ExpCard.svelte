@@ -13,9 +13,9 @@
 	<div class="md:w-3/4 md:mb-0 md:ml-8">
 		<h3 class="text-md font-semibold hover:underline underline-offset-2">
 			{exp.title} -
-			<a href={exp.link} class="text-pop" target="_blank" referrerpolicy="no-referrer"
-				>{exp.company}</a
-			>
+			<a href={exp.link} target="_blank" referrerpolicy="no-referrer">
+				{exp.company}
+			</a>
 		</h3>
 		<p class="text-sm font-normal leading-snug subpixel-antialiased">
 			{exp.description}
