@@ -9,7 +9,7 @@ export default {
         'light': 'rgb(240, 240, 240)', // Background color for light
         'dark-primary': 'rgb(209, 213, 219)', //  out text and headers in dark
         'dark-secondary': 'rgb(107, 114, 128)', // Breadtext in dark
-        'dark': 'rgb(29, 33, 38)', // Background color in dark
+        'dark': 'rgb(19, 21, 25)', // Background color in dark
       
         // Additional colors for light and dark mode
         'lightest-background': '#FFFFFF',
