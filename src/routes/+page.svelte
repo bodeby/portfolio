@@ -1,13 +1,30 @@
 <script lang="ts">
+	import { Octokit } from '@octokit/core';
 	// Data
 	import experiences from '$lib/data/experience.json';
 	import education from '$lib/data/education.json';
 	import projects from '$lib/data/projects.json';
 
 	// Components
-	import ExpCard from '$lib/components/ExpCard.svelte';
-	import EduCard from '$lib/components/EduCard.svelte';
-	import ProCard from '$lib/components/ProCard.svelte';
+	import ExpCard from '$lib/components/cards/ExpCard.svelte';
+	import EduCard from '$lib/components/cards/EduCard.svelte';
+	import ProCard from '$lib/components/cards/ProCard.svelte';
+
+	// // Octokit.js
+	// // https://github.com/octokit/core.js#readme
+	// const octokit = new Octokit({
+	// 	auth: 'YOUR-TOKEN'
+	// });
+
+	// const {
+	// 	data
+	// } = async () => {
+	// 	await octokit.request('GET /user', {
+	// 		headers: {
+	// 			'X-GitHub-Api-Version': '2022-11-28'
+	// 		}
+	// 	});
+	// };
 </script>
 
 <!-- Presentation Header -->
@@ -18,19 +35,20 @@
 		class="w-16 h-16 rounded-full object-cover"
 	/>
 	<div class="flex flex-col -space-y-1 text-lg font-light">
-		<h1 class="font-semibold">Frederik Bode</h1>
+		<h1 class="font-semibold text-primary dark:text-dark-primary">Frederik Bode</h1>
 		<p class="subpixel-antialiased break-words leading-tight">
 			Software Engineering Student at Aalborg University CPH
 		</p>
 	</div>
 </section>
 
-<!-- <a class="text-lg" href="https://github.com/bodeby" target="_blank">@bodeby</a> -->
-
 <!-- About Section-->
 <section>
-	<h2 class="text-xl font-semibold mb-2">About</h2>
-	<p class="text-md font-normal text-gray-300 leading-snug subpixel-antialiased">
+	<h2 class="text-xl font-semibold mb-2 text-primary dark:text-dark-primary">About</h2>
+	<p class="
+	text-md font-normal 
+	leading-snug subpixel-antialiased
+	">
 		Hello, I’m Frederik. I’m a software engineering student with a passion for web-based
 		development. You can contact me on <a
 			class="underline underline-offset-4"

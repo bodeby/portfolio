@@ -5,20 +5,16 @@
 	import '../app.css';
 
 	// Components
-	import GlowBar from '$lib/components/GlowBar.svelte';
+	import GlowBar from '$lib/components/layout/GlowBar.svelte';
 </script>
 
 <svelte:head>
 	<title>Bodeby</title>
 </svelte:head>
 
-<main class="min-h-screen @container bg-primary dark:bg-dark-primary dark:text-gray-200 relative">
+<main class="min-h-screen @container bg-light text-secondary dark:bg-dark dark:text-dark-secondary relative">
 	<GlowBar />
 	<div class="container px-4 md:px-0 mx-auto max-w-xl flex flex-col space-y-8 py-8">
 		<slot />
 	</div>
 </main>
-
-<style>
-
-</style>

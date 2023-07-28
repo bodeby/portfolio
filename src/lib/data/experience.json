@@ -2,6 +2,7 @@
 	{
 		"title": "Software Engineer",
 		"company": "Jorato",
+		"link": "https://jorato.com/",
 		"period": "2023 - now",
 		"description": "Frontend development at Jorato, a startup that aims to make it easier for Real Estate managers to and investors to manage their properties.",
 		"technologies": ["TS", "React", "Vite", "Tailwind", "Zustand"]
@@ -9,6 +10,7 @@
 	{
 		"title": "Teaching Assistant",
 		"company": "Aalborg University CPH",
+		"link": "https://www.aau.dk//",
 		"period": "2020 - 2021",
 		"description": "Assisting in the course: software development, with a focus on object-oriented design & analysis",
 		"technologies": ["OOP", "System-design", "Evaluation"]

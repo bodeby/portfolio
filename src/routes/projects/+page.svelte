@@ -3,7 +3,7 @@
 	import projects from '$lib/data/projects.json';
 
 	// Components
-    import SubHeader from '$lib/components/SubHeader.svelte';
+    import SubHeader from '$lib/components/layout/SubHeader.svelte';
 
     let headerProps = {
         title: 'Side Projects',
