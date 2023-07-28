@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Octokit } from '@octokit/core';
+
 	// Data
 	import experiences from '$lib/data/experience.json';
 	import education from '$lib/data/education.json';
@@ -45,10 +46,12 @@
 <!-- About Section-->
 <section>
 	<h2 class="text-xl font-semibold mb-2 text-primary dark:text-dark-primary">About</h2>
-	<p class="
-	text-md font-normal 
+	<p
+		class="
+	text-md font-normal
 	leading-snug subpixel-antialiased
-	">
+	"
+	>
 		Hello, I’m Frederik. I’m a software engineering student with a passion for web-based
 		development. You can contact me on <a
 			class="underline underline-offset-4"
@@ -59,7 +62,7 @@
 
 <!-- Work Section-->
 <section class="flex flex-col space-y-8">
-	<h2 class="text-md font-semibold -mb-4">Work Experience</h2>
+	<h2 class="text-md font-semibold -mb-4 text-primary dark:text-dark-primary">Work Experience</h2>
 	{#each experiences as exp}
 		<ExpCard {exp} />
 	{/each}
@@ -67,7 +70,11 @@
 
 <!-- Side Projects -->
 <section class="flex flex-col space-y-8">
-	<h2 class="text-md font-semibold -mb-4">Side Projects</h2>
+	<div class="flex justify-between items-baseline">
+		<h2 class="text-md font-semibold -mb-4 text-primary dark:text-dark-primary">Side Projects</h2>
+		<a class="text-xs underline underline-offset-2" href="/projects">See more</a>
+	</div>
+
 	{#each projects as exp}
 		<ProCard {exp} />
 	{/each}
@@ -75,7 +82,7 @@
 
 <!-- Education Section-->
 <section class="flex flex-col space-y-8">
-	<h2 class="text-md font-semibold -mb-4">Education</h2>
+	<h2 class="text-md font-semibold -mb-4 text-primary dark:text-dark-primary">Education</h2>
 	{#each education as edu}
 		<EduCard {edu} />
 	{/each}

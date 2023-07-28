@@ -3,13 +3,13 @@
 	export let edu: Education;
 </script>
 
-<article class="flex flex-col md:flex-row">
+<article class="flex flex-col md:flex-row text-secondary dark:text-dark-secondary">
 	<div class="md:w-1/4">
-		<h4 class="text-sm font-semibold text-gray-500">{edu.period}</h4>
+		<h4 class="text-sm font-semibold">{edu.period}</h4>
 	</div>
 	<div class="md:w-3/4 md:mb-0 md:ml-8">
-		<h3 class="text-md font-semibold">{edu.title}</h3>
-		<p class="text-sm font-normal text-gray-300 leading-snug subpixel-antialiased">
+		<h3 class="text-md text-primary dark:text-dark-primary">{edu.title}</h3>
+		<p class="text-sm font-normal leading-snug subpixel-antialiased">
 			{edu.school}
 		</p>
 	</div>

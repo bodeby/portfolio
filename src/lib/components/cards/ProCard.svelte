@@ -7,14 +7,14 @@
 
 <article class="flex flex-col md:flex-row">
 	<div class="md:w-1/4">
-		<h4 class="text-sm font-semibold text-gray-500">{exp.period}</h4>
+		<h4 class="text-sm font-semibold text-secondary dark:text-dark-secondary">{exp.period}</h4>
 	</div>
-	<div class="md:w-3/4 md:mb-0 md:ml-8">
-		<h3 class="text-md font-semibold">{exp.title} - {exp.company}</h3>
-		<p class="text-sm font-normal text-gray-300 leading-snug subpixel-antialiased">
+	<div class="md:w-3/4 md:mb-0 md:ml-8 text-primary dark:text-dark-primary">
+		<h3 class="text-md font-semibold ">{exp.title} - {exp.company}</h3>
+		<p class="text-sm font-normal leading-snug subpixel-antialiased">
 			{exp.description}
 		</p>
-		<p class="text-sm font-normal text-gray-500 mt-1">
+		<p class="text-sm font-normal mt-1 text-secondary dark:text-dark-secondary">
 			{#each exp.technologies as tech}
                 {#if tech === exp.technologies[length]}
                     {tech}

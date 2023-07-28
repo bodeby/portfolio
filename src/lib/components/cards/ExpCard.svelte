@@ -11,7 +11,7 @@
 		<h4 class="text-sm font-semibold text-secondary dark:text-dark-secondary">{exp.period}</h4>
 	</div>
 	<div class="md:w-3/4 md:mb-0 md:ml-8">
-		<h3 class="text-md font-semibold">
+		<h3 class="text-md font-semibold hover:underline underline-offset-2">
 			{exp.title} -
 			<a href={exp.link} class="text-pop" target="_blank" referrerpolicy="no-referrer"
 				>{exp.company}</a
