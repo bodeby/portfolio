@@ -12,7 +12,7 @@
 	<title>Bodeby</title>
 </svelte:head>
 
-<main class="min-h-screen @container dark:bg-licorice dark:text-gray-200 relative">
+<main class="min-h-screen @container bg-primary dark:bg-dark-primary dark:text-gray-200 relative">
 	<GlowBar />
 	<div class="container px-4 md:px-0 mx-auto max-w-xl flex flex-col space-y-8 py-8">
 		<slot />

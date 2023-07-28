@@ -11,6 +11,6 @@
 		"company": "Aalborg University CPH",
 		"period": "2020 - 2021",
 		"description": "Assisting in the course: software development, with a focus on object-oriented design & analysis",
-		"technologies": ["TS", "React", "Vite", "Tailwind", "Zustand"]
+		"technologies": ["OOP", "System-design", "Evaluation"]
 	}
 ]
