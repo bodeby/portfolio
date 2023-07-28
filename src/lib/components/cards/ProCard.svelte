@@ -5,11 +5,9 @@
 	let length = exp.technologies.length - 1;
 </script>
 
-<article class="flex flex-col md:flex-row">
-	<div class="md:w-1/6">
-		<h4 class="text-sm font-semibold text-secondary dark:text-dark-secondary">{exp.period}</h4>
-	</div>
-	<div class="md:w-5/6 md:mb-0 md:ml-8 text-primary dark:text-dark-primary">
+<article class="flex flex-col">
+	<h4 class="text-sm font-semibold text-secondary dark:text-dark-secondary">{exp.period}</h4>
+	<div class="md:mb-0 text-primary dark:text-dark-primary">
 		<h3 class="text-md font-semibold hover:underline underline-offset-2">
 			<a href={exp.link} target="_blank" referrerpolicy="no-referrer">
 				{exp.title} - {exp.company}

@@ -10,6 +10,8 @@
 	import ExpCard from '$lib/components/cards/ExpCard.svelte';
 	import EduCard from '$lib/components/cards/EduCard.svelte';
 	import ProCard from '$lib/components/cards/ProCard.svelte';
+	import Avatar from '$lib/components/Avatar.svelte';
+	import HeaderTest from '$lib/components/layout/HeaderTest.svelte';
 
 	// // Octokit.js
 	// // https://github.com/octokit/core.js#readme
@@ -30,11 +32,14 @@
 
 <!-- Presentation Header -->
 <section class="flex shrink-0 items-center space-x-4">
-	<img
-		src="/headshot.jpg"
-		alt="Headshot of Frederik Bode"
-		class="w-16 h-16 rounded-full object-cover"
-	/>
+	<div class="max-w-[75px] max-h-[75px] overflow-hidden rounded-full">
+		<img
+			src="/headshot.jpg"
+			alt="Headshot of Frederik Bode"
+			class="object-cover scale-100 bg-center"
+		/>
+	</div>
+
 	<div class="flex flex-col -space-y-1 text-lg font-light">
 		<h1 class="font-semibold text-primary dark:text-dark-primary">Frederik Bode</h1>
 		<p class="break-words leading-snug subpixel-antialiased text-md font-normal">
