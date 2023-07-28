@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary': '#0F1522', // Stand out text and headers light
-        'secondary': '#E94560', // Breadtext in light
-        'light': '#FCA311', // Background color for light
+        'primary': 'rgb(33, 36, 42)', // Stand out text and headers light
+        'secondary': 'rgb(55, 59, 69)', // Breadtext in light
+        'light': 'rgb(240, 240, 240)', // Background color for light
         'dark-primary': 'rgb(209, 213, 219)', //  out text and headers in dark
         'dark-secondary': 'rgb(107, 114, 128)', // Breadtext in dark
-        'dark': '#24292f', // Background color in dark
+        'dark': 'rgb(29, 33, 38)', // Background color in dark
       
         // Additional colors for light and dark mode
         'lightest-background': '#FFFFFF',

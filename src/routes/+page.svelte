@@ -37,7 +37,7 @@
 	/>
 	<div class="flex flex-col -space-y-1 text-lg font-light">
 		<h1 class="font-semibold text-primary dark:text-dark-primary">Frederik Bode</h1>
-		<p class="subpixel-antialiased break-words leading-tight">
+		<p class="break-words leading-snug subpixel-antialiased text-md font-normal">
 			Software Engineering Student at Aalborg University CPH
 		</p>
 	</div>
@@ -46,10 +46,7 @@
 <!-- About Section-->
 <section class="text-primary dark:text-dark-primary">
 	<h2 class="text-xl font-semibold mb-2">About</h2>
-	<p class="
-	text-md font-normal 
-	leading-snug subpixel-antialiased
-	">
+	<p class="text-md font-normal leading-snug subpixel-antialiased">
 		Hello, I’m Frederik. I’m a software engineering student with a passion for web-based
 		development. You can contact me on <a
 			class="underline underline-offset-4"
