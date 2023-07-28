@@ -3,11 +3,14 @@
 	export let edu: Education;
 </script>
 
-<div class="hidden md:block col-span-1">
-	<h4 class="text-md font-medium">{edu.period}</h4>
-</div>
-<div class="col-span-full md:col-span-3">
-	<h3 class="text-lg font-medium">{edu.title}</h3>
-	<p class="text-sm font-normal text-gray-500 mt-0">{edu.school}</p>
-	<h3 class="md:hidden text-md font-light text-gray-500">{edu.period}</h3>
-</div>
+<article class="flex flex-col md:flex-row">
+	<div class="md:w-1/4">
+		<h4 class="text-sm font-semibold text-gray-500">{edu.period}</h4>
+	</div>
+	<div class="md:w-3/4 md:mb-0 md:ml-8">
+		<h3 class="text-md font-semibold">{edu.title}</h3>
+		<p class="text-sm font-normal text-gray-300 leading-snug subpixel-antialiased">
+			{edu.school}
+		</p>
+	</div>
+</article>

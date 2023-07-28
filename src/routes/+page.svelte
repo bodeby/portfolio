@@ -2,7 +2,7 @@
 	// Data
 	import experiences from '$lib/data/experience.json';
 	import education from '$lib/data/education.json';
-	import projects from '$lib/data/projects.json';	
+	import projects from '$lib/data/projects.json';
 
 	// Components
 	import ExpCard from '$lib/components/ExpCard.svelte';
@@ -56,11 +56,9 @@
 </section>
 
 <!-- Education Section-->
-<section class="flex flex-col space-y-6">
-	<h2 class="text-xl font-semibold mb-4">Education</h2>
-	<div class="grid grid-cols-4 gap-y-4">
-		{#each education as edu}
-			<EduCard {edu} />
-		{/each}
-	</div>
+<section class="flex flex-col space-y-8">
+	<h2 class="text-md font-semibold -mb-4">Education</h2>
+	{#each education as edu}
+		<EduCard {edu} />
+	{/each}
 </section>
