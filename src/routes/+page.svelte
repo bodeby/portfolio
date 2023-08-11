@@ -48,6 +48,8 @@
 	</div>
 </section>
 
+<Avatar />
+
 <!-- About Section-->
 <section class="text-primary dark:text-dark-primary">
 	<h2 class="text-xl font-semibold mb-2">About</h2>
@@ -62,7 +64,11 @@
 
 <!-- Work Section-->
 <section class="flex flex-col space-y-8">
-	<h2 class="text-md font-semibold -mb-4 text-primary dark:text-dark-primary">Work Experience</h2>
+	<div class="flex justify-between items-baseline">
+		<h2 class="text-md font-semibold -mb-4 text-primary dark:text-dark-primary">Work Experience</h2>
+		<a class="text-xs underline underline-offset-2" href="/projects">See more</a>
+	</div>
+
 	{#each experiences as exp}
 		<ExpCard {exp} />
 	{/each}

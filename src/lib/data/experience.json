@@ -5,7 +5,7 @@
 		"link": "https://jorato.com/",
 		"period": "2023 - now",
 		"description": "Frontend development at Jorato, a startup that aims to make it easier for Real Estate managers to and investors to manage their properties.",
-		"technologies": ["TS", "React", "Vite", "Tailwind", "Zustand"]
+		"technologies": ["React", "Vite", "Tailwindcss", "Zustand", "TypeScript" ]
 	},
 	{
 		"title": "Teaching Assistant",
