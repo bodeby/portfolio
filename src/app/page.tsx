@@ -122,9 +122,12 @@ export default function Home() {
         <FilterTabs />
 
         <div className="grid grid-cols-3 gap-3 w-full">
-          {[...Array(6)].map((i: React.Key) => (
-            <BlogCard key={i} />
-          ))}
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
         </div>
       </section>
     </main>
