@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Octokit } from '@octokit/core';
+	// import { Octokit } from '@octokit/core';
 
 	// Data
 	import experiences from '$lib/data/experience.json';
@@ -47,8 +47,6 @@
 		</p>
 	</div>
 </section>
-
-<Avatar />
 
 <!-- About Section-->
 <section class="text-primary dark:text-dark-primary">
