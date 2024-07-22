@@ -6,11 +6,12 @@ import BlogCard from "@/components/common/blog-card";
 import FilterTabs from "@/components/common/filter-tabs";
 import { EducationCard } from "@/components/common/education-card";
 import ExperienceCard from "@/components/common/experience-card";
+import { GeistMono } from "geist/font/mono";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-row space-x-6 justify-between p-12">
-      <aside className="relative flex flex-col space-y-6 w-3/12">
+    <main className="flex min-h-screen flex-row space-x-8 justify-between p-8">
+      <aside className="relative flex flex-col space-y-8 w-3/12">
         {/* Presentation Header */}
         <section className="flex shrink-0 items-center space-x-4">
           <div className="max-w-[75px] max-h-[75px] overflow-hidden rounded-full">
@@ -52,25 +53,7 @@ export default function Home() {
 
         <hr />
 
-        {/* <ExperienceCard
-          key={1}
-          experience={{
-            title: "Student Energy Trader",
-            company: "Energy Group",
-            link: "https://jorato.com/",
-            period: "2023 - now",
-            description:
-              "Frontend development at Jorato, a startup that aims to make it easier for Real Estate managers to and investors to manage their properties.",
-            technologies: [
-              "pytorch",
-              "scikit-learn",
-              "pandas",
-              "tslearn",
-              "matplotlib",
-            ],
-          }}
-        /> */}
-
+        {/* Latest / Current Position */}
         <ExperienceCard
           key={1}
           experience={{
@@ -92,6 +75,7 @@ export default function Home() {
 
         <hr />
 
+        {/* Latest / Current Education */}
         <EducationCard
           education={{
             title: "MSc, Software Engineering",
@@ -100,28 +84,19 @@ export default function Home() {
           }}
         />
 
-        <EducationCard
-          education={{
-            title: "BSc, Software Engineering",
-            school: "Aalborg University CPH, Denmark",
-            period: "2020 - 2023",
-          }}
-        />
-
-        <hr />
-
-        <section className="flex flex-col -space-x-1 text-sm">
-          <p className="font-mono">web-app: nextjs</p>
-          <p className="font-mono">styling: Tailwindcss</p>
-          <p className="font-mono">components: shadcn</p>
-          <p className="font-mono">language: Typescript</p>
+        {/* Website Tech-Stack */}
+        <section className="flex place-content-end flex-col -space-y-0 text-xs grow text-neutral-600">
+          <p className={GeistMono.className}>framework: nextjs</p>
+          <p className={GeistMono.className}>styles: tailwindcss</p>
+          <p className={GeistMono.className}>components: shadcn</p>
+          <p className={GeistMono.className}>language: typescript</p>
         </section>
       </aside>
 
-      <section className="w-9/12 flex flex-col space-y-3">
+      <section className="w-9/12 flex flex-col space-y-8">
         <FilterTabs />
 
-        <div className="grid grid-cols-3 gap-3 w-full">
+        <div className="grid grid-cols-3 gap-4 w-full">
           <BlogCard />
           <BlogCard />
           <BlogCard />

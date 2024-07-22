@@ -4,9 +4,10 @@ Personal portfolio / blog website built with Nextjs to showcase projects and ide
 
 ## Core libraries
 
-- **transformers**: async runtime
-- **torch**: python redis toolkit
-- **loguru**: logging rotation, retention and compression
+- **nextjs**: async runtime
+- **tailwindcss**: python redis toolkit
+- **shadcn/ui**: logging rotation, retention and compression
+- **next-mdx-remote**:
 
 ## features
 
@@ -14,13 +15,8 @@ Personal portfolio / blog website built with Nextjs to showcase projects and ide
 - Optimized for SEO (sitemap, robots, JSON-LD schema)
 - RSS Feed
 - Dynamic OG images
-- Syntax highlighting
+- Code Syntax highlighting
 - Vercel Speed Insights / Web Analytics
-
-
-## Used Freebies
-
-- [lummi.ai]( https://www.lummi.ai/): free AI generated stock-photo for blog pictures
 
 ## Running the service
 
@@ -34,5 +30,8 @@ python app/main.py
 python app/main.py prod
 ```
 
+## Cool tools
 
-inspired by vercel blog example: [vercel-blog](https://github.com/vercel/examples/tree/main/solutions/blog)
+- [transformers.js](https://huggingface.co/docs/transformers.js/en/tutorials/react): could provide some cool functionality to the site
+- [lummi.ai]( https://www.lummi.ai/): free AI generated stock-photo for blog pictures
+- [vercel-blog](https://github.com/vercel/examples/tree/main/solutions/blog)
