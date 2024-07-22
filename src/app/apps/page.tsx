@@ -1,15 +1,9 @@
 import React from "react";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { headers } from "next/headers";
 import { PlausibleStats } from "@/types/plausible";
 import { AppCard } from "./components/card";
+
+import * as Card from "@/components/ui/card";
 
 type App = {
   title: string;
@@ -59,32 +53,28 @@ export default async function AppPage() {
   const pl_main = await getData("frederikbode.com");
 
   return (
-    <main className="flex min-h-screen flex-row space-x-8 justify-between p-8">
-      <section className="grid grid-cols-3 gap-4 w-full">
-        {data.map((item: App, i: React.Key) => (
-          <a href={item.url} key={i} target="_blank" rel="noopener" className="">
-            <Card className="w-full">
-              <CardHeader>
-                <CardTitle className="line-clamp-1 text-md">
-                  {item.title}
-                </CardTitle>
-                <CardDescription className="text-xs underline underline-offset-2">
-                  {item.url}
-                </CardDescription>
-              </CardHeader>
+    <section className="grid grid-cols-2 gap-4 w-full">
+      {data.map((item: App, i: React.Key) => (
+        <a href={item.url} key={i} target="_blank" rel="noopener" className="">
+          <Card.Card className="w-full">
+            <Card.CardHeader>
+              <Card.CardTitle className="line-clamp-1 text-md">
+                {item.title}
+              </Card.CardTitle>
+              <Card.CardDescription className="text-xs underline underline-offset-2">
+                {item.url}
+              </Card.CardDescription>
+            </Card.CardHeader>
 
-              <CardContent>
-                <p className="line-clamp-2 font-light text-sm">
-                  {pl_ascii.results.pageviews.value}
-                </p>
-                <AppCard />
-              </CardContent>
-            </Card>
-          </a>
-        ))}
-      </section>
-
-      <AppCard />
-    </main>
+            <Card.CardContent className="max-h-[120px] overflow-hidden">
+              <p className="line-clamp-2 font-light text-sm">
+                {pl_ascii.results.pageviews.value}
+              </p>
+              <AppCard />
+            </Card.CardContent>
+          </Card.Card>
+        </a>
+      ))}
+    </section>
   );
 }
