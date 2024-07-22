@@ -17,7 +17,7 @@ const ExperienceCard: React.FC<{ experience: Experience }> = ({
 
   return (
     <article className="flex flex-col">
-      <h4 className="text-sm font-">{experience.period}</h4>
+      <h4 className="text-sm font-light">{experience.period}</h4>
       <div className="md:mb-0">
         <h3 className="text-md font-semibold hover:underline underline-offset-2">
           {experience.title} -

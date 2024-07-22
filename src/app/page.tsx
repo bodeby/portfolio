@@ -1,12 +1,11 @@
 import Image from "next/image";
+import { GeistMono } from "geist/font/mono";
 
 // components
-import PageCard from "@/components/common/page-card";
-import BlogCard from "@/components/common/blog-card";
 import FilterTabs from "@/components/common/filter-tabs";
-import { EducationCard } from "@/components/common/education-card";
+import BlogCard from "@/components/common/blog-card";
+import EducationCard from "@/components/common/education-card";
 import ExperienceCard from "@/components/common/experience-card";
-import { GeistMono } from "geist/font/mono";
 
 export default function Home() {
   return (
@@ -26,7 +25,8 @@ export default function Home() {
 
           <div className="flex flex-col -space-y-1 text-md font-light">
             <h1 className="font-semibold text-primary dark:text-dark-primary">
-              Frederik Bode
+              Frederik Bode{" "}
+              <span className="text-blue-500">&#123;bodeby&#125;</span>
             </h1>
             <p className="break-words leading-snug subpixel-antialiased text-sm font-normal">
               Software Engineering Student at Aalborg University CPH
