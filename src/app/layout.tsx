@@ -67,13 +67,16 @@ export default function RootLayout({
                   width={534}
                   height={534}
                   className="object-cover scale-100 bg-center"
+                  priority={true}
+                  placeholder="blur"
+                  blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPcXA8AAesBNGQg4IAAAAAASUVORK5CYII="
                 />
               </div>
 
               <div className="flex flex-col -space-y-1 text-md font-light">
                 <h1 className="font-semibold text-primary dark:text-dark-primary">
-                  Frederik Bode{" "}
-                  <span className="text-blue-500">&#123;bodeby&#125;</span>
+                  <span>Frederik Bode</span>
+                  <span className="text-blue-500 ml-1">&#123;bodeby&#125;</span>
                 </h1>
                 <p className="break-words leading-snug subpixel-antialiased text-sm font-normal">
                   Software Engineering Student at Aalborg University CPH

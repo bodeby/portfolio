@@ -6,10 +6,21 @@ import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { highlight } from "sugar-high";
 
-function Table({ data }) {
+// Types for Table component
+interface TableProps {
+  data: {
+    headers: string[];
+    rows: string[][];
+  };
+}
+
+const Table: React.FC<TableProps> = ({ data }) => {
+  // create table headers: Array<Headers>
   let headers = data.headers.map((header, index) => (
     <th key={index}>{header}</th>
   ));
+
+  // create table rows: Array<Rows>
   let rows = data.rows.map((row, index) => (
     <tr key={index}>
       {row.map((cell, cellIndex) => (
@@ -26,7 +37,7 @@ function Table({ data }) {
       <tbody>{rows}</tbody>
     </table>
   );
-}
+};
 
 function CustomLink(props) {
   let href = props.href;
