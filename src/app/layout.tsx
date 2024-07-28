@@ -1,10 +1,15 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
 
 // fonts
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+
+// tracking
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // components
 import EducationCard from "@/components/common/education-card";
@@ -12,7 +17,6 @@ import ExperienceCard from "@/components/common/experience-card";
 
 // sitemap generation script
 import { baseUrl } from "./sitemap";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -152,6 +156,9 @@ export default function RootLayout({
 
           <section className="w-9/12 overflow-scroll">{children}</section>
         </main>
+
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
