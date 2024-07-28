@@ -51,6 +51,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          defer
+          data-domain="frederikbode.com"
+          src="https://plausible.io/js/script.js"
+        ></script>
+      </head>
       <body className={GeistSans.className}>
         <div className="antialiased bg-gradient-to-r from-blue-500 via-green-500 to-blue-500 shadow-xl block w-full h-2 mb-8 md:mb-0 sticky top-0 z-10 animated-gradient" />
 
