@@ -1,20 +1,18 @@
-import Image from "next/image";
-
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
+import Image from "next/image";
 
 // fonts
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
 // components
-import FilterTabs from "@/components/common/filter-tabs";
-import BlogCard from "@/components/common/blog-card";
 import EducationCard from "@/components/common/education-card";
 import ExperienceCard from "@/components/common/experience-card";
 
 // sitemap generation script
 import { baseUrl } from "./sitemap";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -59,30 +57,32 @@ export default function RootLayout({
         <main className="flex min-h-screen flex-row space-x-8 justify-between p-8">
           <aside className="relative flex flex-col space-y-8 w-3/12">
             {/* Presentation Header */}
-            <section className="flex shrink-0 items-center space-x-4">
-              <div className="max-w-[75px] max-h-[75px] overflow-hidden rounded-full">
-                <Image
-                  src="/roboto.png"
-                  alt="Headshot of Frederik Bode"
-                  width={534}
-                  height={534}
-                  className="object-cover scale-100 bg-center"
-                  priority={true}
-                  placeholder="blur"
-                  blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPcXA8AAesBNGQg4IAAAAAASUVORK5CYII="
-                />
-              </div>
+            <Link href="/">
+              <section className="flex shrink-0 items-center space-x-4">
+                <div className="max-w-[75px] max-h-[75px] overflow-hidden rounded-full">
+                  <Image
+                    src="/roboto.png"
+                    alt="Headshot of Frederik Bode"
+                    width={534}
+                    height={534}
+                    className="object-cover scale-100 bg-center"
+                    priority={true}
+                    placeholder="blur"
+                    blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPcXA8AAesBNGQg4IAAAAAASUVORK5CYII="
+                  />
+                </div>
 
-              <div className="flex flex-col -space-y-1 text-md font-light">
-                <h1 className="font-semibold text-primary dark:text-dark-primary">
-                  <span>Frederik Bode</span>
-                  {/* <span className="text-blue-500 ml-1">&#123;bodeby&#125;</span> */}
-                </h1>
-                <p className="break-words leading-snug subpixel-antialiased text-sm font-normal">
-                  Software Engineering Student at Aalborg University CPH
-                </p>
-              </div>
-            </section>
+                <div className="flex flex-col -space-y-1 text-md font-light">
+                  <h1 className="font-semibold text-primary dark:text-dark-primary">
+                    <span>Frederik Bode</span>
+                    {/* <span className="text-blue-500 ml-1">&#123;bodeby&#125;</span> */}
+                  </h1>
+                  <p className="break-words leading-snug subpixel-antialiased text-sm font-normal">
+                    Software Engineering Student at Aalborg University CPH
+                  </p>
+                </div>
+              </section>
+            </Link>
 
             {/*About Section */}
             <section className="text-primary dark:text-dark-primary">
@@ -104,7 +104,9 @@ export default function RootLayout({
             <hr />
 
             {/* Latest / Current Position */}
-            <ExperienceCard key={1} experience={{
+            <ExperienceCard
+              key={1}
+              experience={{
                 title: "Software Developer",
                 company: "Jorato",
                 link: "https://jorato.com/",
@@ -124,7 +126,8 @@ export default function RootLayout({
             <hr />
 
             {/* Latest / Current Education */}
-            <EducationCard education={{
+            <EducationCard
+              education={{
                 title: "MSc, Software Engineering",
                 school: "Aalborg University CPH, Denmark",
                 period: "2023 - 2025",
@@ -140,9 +143,7 @@ export default function RootLayout({
             </section>
           </aside>
 
-          <section className="w-9/12 overflow-scroll">
-            {children}
-          </section>
+          <section className="w-9/12 overflow-scroll">{children}</section>
         </main>
       </body>
     </html>
