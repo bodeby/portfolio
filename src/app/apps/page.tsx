@@ -34,9 +34,12 @@ const data: Array<App> = [
   },
 ];
 
+
+// server-side fetch
 async function fetchVisitorData(id: string) {
-  const token =
-    "H1VvasbSds0mJZ9wBZuEe42oKnlvjC0KznjqHOD18W28r8s0PNXGEo4_ONgoRfOk";
+  const token = process.env.PLAUSIBLE_API_KEY;
+
+  console.log(token);
   const res = await fetch(
     `https://plausible.io/api/v1/stats/aggregate?site_id=${id}&period=6mo&metrics=visitors,pageviews,bounce_rate,visit_duration`,
     {
@@ -50,31 +53,31 @@ async function fetchVisitorData(id: string) {
   return res.json();
 }
 
-// server side data fetching function
-async function getData(site_id: string): Promise<PlausibleStats> {
-  const results = await Promise.all([
-    fetchVisitorData("energy.frederikbode.com"),
-    fetchVisitorData("ascii.frederikbode.com"),
-    fetchVisitorData("www.frederikbode.com"),
-  ]);
+// // server side data fetching function
+// async function getData(site_id: string): Promise<PlausibleStats> {
+//   const results = await Promise.all([
+//     fetchVisitorData("energy.frederikbode.com"),
+//     fetchVisitorData("ascii.frederikbode.com"),
+//     fetchVisitorData("www.frederikbode.com"),
+//   ]);
 
-  return res.json();
-}
+//   return res.json();
+// }
 
-// Fetch data for all sites concurrently
-async function fetchAllData(): Promise<SiteData[]> {
-  const dataPromises = plausibleIds.map(async (plausible_id) => {
-    const stats = await getData(plausible_id);
-    return { plausible_id, stats };
-  });
+// // Fetch data for all sites concurrently
+// async function fetchAllData(): Promise<SiteData[]> {
+//   const dataPromises = plausibleIds.map(async (plausible_id) => {
+//     const stats = await getData(plausible_id);
+//     return { plausible_id, stats };
+//   });
 
-  const siteData = await Promise.all(dataPromises);
-}
+//   const siteData = await Promise.all(dataPromises);
+// }
 
 export default async function AppPage() {
-  const pl_ascii = await getData("ascii.frederikbode.com");
-  const pl_energy = await getData("energy.frederikbode.com");
-  const pl_main = await getData("frederikbode.com");
+  const pl_ascii = await fetchVisitorData("ascii.frederikbode.com");
+  // const pl_energy = await getData("energy.frederikbode.com");
+  // const pl_main = await getData("frederikbode.com");
 
   return (
     <section className="grid grid-cols-2 gap-4 w-full">
