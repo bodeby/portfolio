@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className}>
-        <div className="bg-gradient-to-r from-blue-500 via-green-500 to-blue-500 shadow-xl block w-full h-2 mb-8 md:mb-0 sticky top-0 z-10 animated-gradient" />
+        <div className="antialiased bg-gradient-to-r from-blue-500 via-green-500 to-blue-500 shadow-xl block w-full h-2 mb-8 md:mb-0 sticky top-0 z-10 animated-gradient" />
 
         <main className="flex min-h-screen flex-row space-x-8 justify-between p-8">
           <aside className="relative flex flex-col space-y-8 w-3/12">
@@ -76,7 +76,7 @@ export default function RootLayout({
               <div className="flex flex-col -space-y-1 text-md font-light">
                 <h1 className="font-semibold text-primary dark:text-dark-primary">
                   <span>Frederik Bode</span>
-                  <span className="text-blue-500 ml-1">&#123;bodeby&#125;</span>
+                  {/* <span className="text-blue-500 ml-1">&#123;bodeby&#125;</span> */}
                 </h1>
                 <p className="break-words leading-snug subpixel-antialiased text-sm font-normal">
                   Software Engineering Student at Aalborg University CPH
@@ -140,7 +140,7 @@ export default function RootLayout({
             </section>
           </aside>
 
-          <section className="w-9/12">
+          <section className="w-9/12 overflow-scroll">
             {children}
           </section>
         </main>
