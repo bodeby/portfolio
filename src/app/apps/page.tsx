@@ -1,10 +1,9 @@
 import React from "react";
 
-import { PlausibleStats } from "@/types/plausible";
 import { VisitorGraph } from "./components/visitor-graph";
+import { fetchVisitorData } from "./lib/utils";
 
 import * as Card from "@/components/ui/card";
-import { AppCard } from "./components/app-card";
 
 export type App = {
   title: string;
@@ -34,25 +33,6 @@ const data: Array<App> = [
   },
 ];
 
-
-// server-side fetch
-async function fetchVisitorData(id: string) {
-  const token = process.env.PLAUSIBLE_API_KEY;
-
-  console.log(token);
-  const res = await fetch(
-    `https://plausible.io/api/v1/stats/aggregate?site_id=${id}&period=6mo&metrics=visitors,pageviews,bounce_rate,visit_duration`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-
-  if (!res.ok) throw new Error("Failed to fetch data");
-  return res.json();
-}
-
 // // server side data fetching function
 // async function getData(site_id: string): Promise<PlausibleStats> {
 //   const results = await Promise.all([
@@ -76,8 +56,8 @@ async function fetchVisitorData(id: string) {
 
 export default async function AppPage() {
   const pl_ascii = await fetchVisitorData("ascii.frederikbode.com");
-  // const pl_energy = await getData("energy.frederikbode.com");
-  // const pl_main = await getData("frederikbode.com");
+
+  console.log(pl_ascii);
 
   return (
     <section className="grid grid-cols-2 gap-4 w-full">

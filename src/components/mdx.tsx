@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 import Image from "next/image";
 
 // mdx and syntax highlight
@@ -57,10 +57,12 @@ function CustomLink(props) {
   return <a target="_blank" rel="noopener noreferrer" {...props} />;
 }
 
+// ? create a rounded image component
 function RoundedImage(props) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />;
 }
 
+// ? create a code snippet component
 function Code({ children, ...props }) {
   let codeHTML = highlight(children);
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
