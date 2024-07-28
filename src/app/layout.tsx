@@ -104,9 +104,7 @@ export default function RootLayout({
             <hr />
 
             {/* Latest / Current Position */}
-            <ExperienceCard
-              key={1}
-              experience={{
+            <ExperienceCard key={1} experience={{
                 title: "Software Developer",
                 company: "Jorato",
                 link: "https://jorato.com/",
@@ -126,8 +124,7 @@ export default function RootLayout({
             <hr />
 
             {/* Latest / Current Education */}
-            <EducationCard
-              education={{
+            <EducationCard education={{
                 title: "MSc, Software Engineering",
                 school: "Aalborg University CPH, Denmark",
                 period: "2023 - 2025",

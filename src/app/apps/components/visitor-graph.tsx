@@ -38,7 +38,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function AppCard() {
+export function VisitorGraph() {
   return (
     <ChartContainer config={chartConfig}>
       <AreaChart
