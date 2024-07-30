@@ -6,8 +6,8 @@ Personal portfolio / blog website built with Nextjs to showcase projects and ide
 
 - **nextjs**: async runtime
 - **tailwindcss**: python redis toolkit
-- **shadcn/ui**: logging rotation, retention and compression
-- **next-mdx-remote**:
+- **shadcn/ui**: components and ui block based on radix
+- **next-mdx-remote**: rendering of markdown (mdx)
 
 ## features
 
@@ -34,7 +34,6 @@ python app/main.py prod
 
 - [transformers.js](https://huggingface.co/docs/transformers.js/en/tutorials/react): could provide some cool functionality to the site
 - [lummi.ai](https://www.lummi.ai/): free AI generated stock-photo for blog pictures
-- [vercel-blog](https://github.com/vercel/examples/tree/main/solutions/blog)
 - [indie-page](https://marclou.com/)
 - [plausible-api](https://plausible.io/docs/stats-api#get-apiv1statstimeseries)
 
@@ -49,3 +48,8 @@ python app/main.py prod
 ## Publications
 
 - [Leveraging Large Language Models for Actionable Course Evaluation Student Feedback to Lecturers](https://arxiv.org/abs/2407.01274)
+
+## Usefull
+
+- [blog-github](https://github.com/vercel/examples/tree/main/solutions/blog)
+- [blog-demo](https://portfolio-blog-starter.vercel.app/)

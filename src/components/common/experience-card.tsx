@@ -39,7 +39,7 @@ const ExperienceCard: React.FC<{ experience: Experience }> = ({
               return <span key={i}>{tech}</span>;
             } else {
               return (
-                <span key={i} className="mx-1">
+                <span key={i} className="mr-1">
                   {tech} •
                 </span>
               );

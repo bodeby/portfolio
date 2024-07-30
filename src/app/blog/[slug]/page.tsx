@@ -1,8 +1,6 @@
 import React from "react";
 import { notFound } from "next/navigation";
-
 import { CustomMDX } from "@/components/mdx";
-
 import { formatDate, getBlogPosts } from "@/app/blog/utils";
 
 export async function generateStaticParams() {
@@ -18,7 +16,7 @@ export default function Page({ params }) {
   if (!post) return notFound();
 
   return (
-    <section>
+    <section className="">
       <h1 className="title font-semibold text-2xl tracking-tighter">
         {post.metadata.title}
       </h1>
@@ -27,6 +25,7 @@ export default function Page({ params }) {
           {formatDate(post.metadata.publishedAt)}
         </p>
       </div>
+
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
