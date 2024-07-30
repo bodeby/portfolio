@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-hidden">
       <head>
         <script
           data-domain="frederikbode.com"
@@ -32,15 +32,16 @@ export default function RootLayout({
           defer
         ></script>
       </head>
+
       <body className={GeistSans.className}>
         <div className="antialiased bg-gradient-to-r from-blue-500 via-green-500 to-blue-500 shadow-xl block w-full h-2 mb-8 md:mb-0 sticky top-0 z-10 animated-gradient" />
 
-        <main className="flex min-h-screen flex-none lg:flex-row  space-x-8 justify-between p-8">
+        <main className="flex h-screen space-x-8 justify-between p-8 overflow-hidden">
           <Side />
 
-          <section className="w-full xl:w-9/12 overflow-scroll">
-            {children}
-          </section>
+          <div className="flex-grow overflow-scroll pr-3 xl:w-9/12">
+            <section className="">{children}</section>
+          </div>
         </main>
 
         <Analytics />

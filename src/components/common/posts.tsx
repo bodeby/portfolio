@@ -11,7 +11,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 const sorter = (a, b) =>
   new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt) ? -1 : 1;
 
-const allFilters = ["transformers", "supervised", "unsupervised"];
+const allFilters = ["personal", "research", "education"];
 
 export const PostRenderrer = ({ initialPosts }) => {
   const [posts] = React.useState(initialPosts);
@@ -38,14 +38,14 @@ export const PostRenderrer = ({ initialPosts }) => {
         size={"sm"}
         variant={"outline"}
       >
-        <ToggleGroupItem value="transformers" aria-label="Toggle bold">
-          transformers
+        <ToggleGroupItem value="personal" aria-label="Toggle bold">
+          personal
         </ToggleGroupItem>
-        <ToggleGroupItem value="unsupervised" aria-label="Toggle bold">
-          unsupervised
+        <ToggleGroupItem value="research" aria-label="Toggle bold">
+          research
         </ToggleGroupItem>
-        <ToggleGroupItem value="supervised" aria-label="Toggle bold">
-          supervised
+        <ToggleGroupItem value="education" aria-label="Toggle bold">
+          education
         </ToggleGroupItem>
       </ToggleGroup>
 

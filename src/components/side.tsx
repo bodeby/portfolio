@@ -45,9 +45,9 @@ export const Side = () => {
         <h2 className="text-md font-semibold mb-2">About</h2>
         <p className="text-sm font-normal leading-snug subpixel-antialiased">
           Hello, I’m Frederik. I’m a software engineering student with a passion
-          for web-dev and all things machine learning, You can contact me on{" "}
+          for web development and all things machine learning, I can be reached on
           <a
-            className="underline underline-offset-4"
+            className="underline underline-offset-4 ml-1"
             href="https://www.linkedin.com/in/frederik-bode-thorbensen/"
           >
             Linkedin
