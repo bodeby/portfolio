@@ -46,14 +46,14 @@ export default function RootLayout({
 
       <body className={GeistSans.className}>
         <div className="antialiased bg-gradient-to-r from-blue-500 via-green-500 to-blue-500 shadow-xl block w-full h-2 mb-8 md:mb-0 fixed top-0 z-10 animated-gradient" />
-        <main className="flex flex-row space-x-8 justify-between">
+        <main className="flex flex-row space-x-8 justify-between p-8">
           {/** Left Section */}
-          <section className="w-full sm:w-1/3 md:w-1/4 xl:w-3/12 py-8 px-8">
+          <section className="w-full sm:w-1/3 md:w-1/4 xl:w-3/12">
             <Side />
           </section>
 
           {/** Right Section */}
-          <section className="flex-grow pr-3 sm:w-2/3 md:w-3/4 xl:w-9/12 py-8 px-8">
+          <section className="flex-grow sm:w-2/3 md:w-3/4 xl:w-9/12 pl-8">
             {children}
           </section>
         </main>
@@ -140,46 +140,23 @@ const Side = () => {
         }}
       />
 
+      <EducationCard
+        education={{
+          title: "BSc, Software Engineering",
+          school: "Aalborg University CPH, Denmark",
+          description:
+            "Frontend development at Jorato, a startup that aims to make it easier for Real Estate managers to and investors to manage their properties.",
+          period: "2023 - 2025",
+        }}
+      />
+
       {/* Website Tech-Stack */}
-      <section className="flex place-content-end flex-col -space-y-0 text-xs grow text-neutral-600">
+      {/* <section className="flex place-content-end flex-col -space-y-0 text-xs grow text-neutral-600">
         <p className={GeistMono.className}>framework: nextjs</p>
         <p className={GeistMono.className}>styles: tailwindcss</p>
         <p className={GeistMono.className}>components: shadcn</p>
         <p className={GeistMono.className}>language: typescript</p>
-      </section>
+      </section> */}
     </aside>
   );
 };
-
-function RootLayoutCopy({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className="overflow-hidden">
-      <head>
-        <script
-          data-domain="frederikbode.com"
-          src="https://plausible.io/js/script.js"
-          defer
-        ></script>
-      </head>
-
-      <body className={GeistSans.className}>
-        <div className="antialiased bg-gradient-to-r from-blue-500 via-green-500 to-blue-500 shadow-xl block w-full h-2 mb-8 md:mb-0 sticky top-0 z-10 animated-gradient" />
-
-        <main className="flex h-screen space-x-8 justify-between p-8 overflow-hidden">
-          <Side />
-
-          <div className="flex-grow overflow-scroll pr-3 xl:w-9/12">
-            <section className="">{children}</section>
-          </div>
-        </main>
-
-        <Analytics />
-        <SpeedInsights />
-      </body>
-    </html>
-  );
-}

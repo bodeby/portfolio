@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 
 import * as Shadcn from "@/components/ui/card";
+import { TickSelector } from "@/components/tick-selector";
 
 // components
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
@@ -71,8 +72,9 @@ const BlogCard = ({ post }) => (
         <Shadcn.CardTitle className="line-clamp-1 text-md">
           {post.metadata.title}
         </Shadcn.CardTitle>
+        <TickSelector tag={post.metadata.tag} />
         <Shadcn.CardDescription className="text-sm">
-          {post.metadata.publishedAt} - {post.metadata.tag}
+          {post.metadata.publishedAt}
         </Shadcn.CardDescription>
       </Shadcn.CardHeader>
 
@@ -84,3 +86,5 @@ const BlogCard = ({ post }) => (
     </Shadcn.Card>
   </Link>
 );
+
+

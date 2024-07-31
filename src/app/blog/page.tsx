@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatDate, getBlogPosts } from "@/app/blog/utils";
+import { formatDate, getBlogPosts } from "@/lib/blog";
 
 export const metadata = {
   title: "Blog",

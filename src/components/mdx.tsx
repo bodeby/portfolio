@@ -6,6 +6,9 @@ import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { highlight } from "sugar-high";
 
+// own comps
+import BlogCard from "./common/blog-card";
+
 // Types for Table component
 interface TableProps {
   data: {
@@ -68,6 +71,10 @@ function Code({ children, ...props }) {
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 }
 
+function ProjectCard(props) {
+
+}
+
 function slugify(str) {
   return str
     .toString()
@@ -112,6 +119,7 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
+  BlogCard
 };
 
 export function CustomMDX(props) {

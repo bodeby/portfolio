@@ -1,13 +1,7 @@
 import React from "react";
-import Link from "next/link";
-import { formatDate, getBlogPosts } from "@/app/blog/utils";
+import { getBlogPosts } from "@/lib/blog";
 
 // components
-import FilterTabs from "@/components/common/filter-tabs";
-import BlogCard from "@/components/common/blog-card";
-import * as Shadcn from "@/components/ui/card";
-
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { PostRenderrer } from "@/components/common/posts";
 
 const sorter = (a, b) =>
