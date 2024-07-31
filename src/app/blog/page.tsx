@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { formatDate, getBlogPosts } from "@/lib/blog";
 
+// shadcn
+import * as SC from "@/components/ui/breadcrumb";
+
 export const metadata = {
   title: "Blog",
   description: "Read my blog.",
@@ -13,7 +16,21 @@ export default function Page() {
   const allBlogs = getBlogPosts();
   return (
     <section>
-      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">Post Index</h1>
+      <SC.Breadcrumb>
+        <SC.BreadcrumbList>
+          <SC.BreadcrumbItem>
+            <SC.BreadcrumbLink href="/">Home</SC.BreadcrumbLink>
+          </SC.BreadcrumbItem>
+          <SC.BreadcrumbSeparator />
+          <SC.BreadcrumbItem>
+            <SC.BreadcrumbLink href="/blog">Blog</SC.BreadcrumbLink>
+          </SC.BreadcrumbItem>
+        </SC.BreadcrumbList>
+      </SC.Breadcrumb>
+
+      <h1 className="font-semibold text-2xl mb-8 tracking-tighter mt-4">
+        Post Index
+      </h1>
 
       <div>
         {allBlogs

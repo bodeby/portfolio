@@ -3,10 +3,11 @@ import { notFound } from "next/navigation";
 import { CustomMDX } from "@/components/mdx";
 import { formatDate, getBlogPosts } from "@/lib/blog";
 
-export async function generateStaticParams() {
-  let posts = getBlogPosts();
+// shadcn
+import * as SC from "@/components/ui/breadcrumb";
 
-  return posts.map((post) => ({
+export async function generateStaticParams() {
+  return getBlogPosts().map((post) => ({
     slug: post.slug,
   }));
 }
@@ -17,7 +18,26 @@ export default function Page({ params }) {
 
   return (
     <section className="">
-      <h1 className="title font-semibold text-2xl tracking-tighter">
+
+      <SC.Breadcrumb>
+        <SC.BreadcrumbList>
+          <SC.BreadcrumbItem>
+            <SC.BreadcrumbLink href="/">Home</SC.BreadcrumbLink>
+          </SC.BreadcrumbItem>
+          <SC.BreadcrumbSeparator />
+          <SC.BreadcrumbItem>
+            <SC.BreadcrumbLink href="/blog">Blog</SC.BreadcrumbLink>
+          </SC.BreadcrumbItem>
+          <SC.BreadcrumbSeparator />
+          <SC.BreadcrumbItem>
+            <SC.BreadcrumbLink href={`/blog/${post.slug}`}>
+              {post.metadata.title}
+            </SC.BreadcrumbLink>
+          </SC.BreadcrumbItem>
+        </SC.BreadcrumbList>
+      </SC.Breadcrumb>
+
+      <h1 className="title font-semibold text-2xl tracking-tighter mt-4">
         {post.metadata.title}
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">

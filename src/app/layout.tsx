@@ -7,6 +7,7 @@ import Image from "next/image";
 // components
 import ExperienceCard from "@/components/common/experience-card";
 import EducationCard from "@/components/common/education-card";
+import { HugginfaceIcon } from "@/components/icons";
 
 // fonts
 import { GeistMono } from "geist/font/mono";
@@ -140,15 +141,24 @@ const Side = () => {
         }}
       />
 
-      <EducationCard
-        education={{
-          title: "BSc, Software Engineering",
-          school: "Aalborg University CPH, Denmark",
-          description:
-            "Frontend development at Jorato, a startup that aims to make it easier for Real Estate managers to and investors to manage their properties.",
-          period: "2023 - 2025",
-        }}
-      />
+      <div className="flex flex-row justify-center space-x-5">
+        <a href="https://vbn.aau.dk/en/persons/fbth" target="_blank" rel="noopener">
+          <HugginfaceIcon width={25} height={25} />
+        </a>
+        <a href="https://github.com/bodeby" target="_blank" rel="noopener">
+          <HugginfaceIcon width={25} height={25} />
+        </a>
+        <a href="https://huggingface.co/fredebode" target="_blank" rel="noopener">
+          <HugginfaceIcon width={25} height={25} />
+        </a>
+        <a href="https://www.linkedin.com/in/frederik-bode-thorbensen" target="_blank" rel="noopener">
+          <HugginfaceIcon width={25} height={25} />
+        </a>
+        <a href="https://broken-band-e02.notion.site/d4f22adfcb5c427db914021a64acb731?v=a15ad34d04714a1382a12b92fca8eafb" target="_blank" rel="noopener">
+          <HugginfaceIcon width={25} height={25} />
+        </a>
+
+      </div>
 
       {/* Website Tech-Stack */}
       {/* <section className="flex place-content-end flex-col -space-y-0 text-xs grow text-neutral-600">
