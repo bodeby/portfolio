@@ -11,7 +11,7 @@ import { GeistMono } from "geist/font/mono";
 
 export const Side = () => {
   return (
-    <aside className="relative flex flex-col space-y-8 w-full xl:w-3/12">
+    <aside className="fixed flex flex-col space-y-8 w-full xl:w-3/12">
       {/* Presentation Header */}
       <Link href="/">
         <section className="flex shrink-0 items-center space-x-4">
@@ -45,7 +45,8 @@ export const Side = () => {
         <h2 className="text-md font-semibold mb-2">About</h2>
         <p className="text-sm font-normal leading-snug subpixel-antialiased">
           Hello, I’m Frederik. I’m a software engineering student with a passion
-          for web development and all things machine learning, I can be reached on
+          for web development and all things machine learning, I can be reached
+          on
           <a
             className="underline underline-offset-4 ml-1"
             href="https://www.linkedin.com/in/frederik-bode-thorbensen/"

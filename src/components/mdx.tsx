@@ -1,5 +1,5 @@
 import React from "react";
-import Link, { LinkProps } from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 
 // mdx and syntax highlight
